@@ -1,3 +1,17 @@
+const template = document.createElement("div");
+template.innerHTML = `
+  <style>
+    p {
+      color: blue;
+    }
+    .texto {
+      color: red;
+    }
+  </style>
+  <p class="texto">Hello world 2</p>
+  <p>Example text</p>
+`;
+
 class myElement extends HTMLElement {
   constructor() {
     super();
@@ -7,7 +21,7 @@ class myElement extends HTMLElement {
 
   connectedCallback() {
     this.p.textContent = "Hello world from Web Components!";
-    this.appendChild(this.p);
+    this.append(this.p, template);
   }
 }
 
