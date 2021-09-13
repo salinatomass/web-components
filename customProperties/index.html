@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Properties</title>
+    <style>
+      my-element {
+        --primary-color: blue;
+        --heading-secondary: 16px;
+      }
+      my-element.danger {
+        --primary-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <my-element>
+      <span slot="title">Hola desde componente 1</span>
+      <span class="text" slot="paragraph">Soy texto ejemplo</span>
+    </my-element>
+    <my-element class="danger">
+      <span slot="title">Hola desde componente 1</span>
+      <span class="text" slot="paragraph">Soy texto ejemplo</span>
+    </my-element>
+    <my-element>
+      <span slot="title">Hola desde componente 1</span>
+      <span class="text" slot="paragraph">Soy texto ejemplo</span>
+    </my-element>
+    <script type="module" src="./my-element.js"></script>
+  </body>
+</html>
